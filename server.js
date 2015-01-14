@@ -1,17 +1,26 @@
-var express = require('express');
+var express = require('express.io'),
+    swig = require('swig');
 var server = express();
+server.http().io();
+
+//Static files
+server.use(express.static('./public'));
+
+//Config views
+server.engine('html',swig.renderFile);
+server.set('view engine','html');
+server.set('views','./app/views');
 
 var messages = [];
 var responses = [];
 
 server.get('/',function(req, res){
-    responses.push(res);
+    //responses.push(res);
+    res.render('index');
 });
 
-server.get('/:message',function(req, res){
+server.get('/hashtag/:message',function(req, res){
     messages.push(req.params.message);
-
-    debugger;
 
     responses.forEach(function(res){
         res.send(messages + '<script>window.location.reload()</script>');
@@ -20,4 +29,4 @@ server.get('/:message',function(req, res){
     res.send('el mensaje <b>'+ req.params.message + '</b> ha sido enviado');
 });
 
-server.listen(3000);
+server.listen(8080);

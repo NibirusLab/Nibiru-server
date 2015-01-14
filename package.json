@@ -2,6 +2,8 @@
   "name": "Nibiru",
   "version": "0.0.1",
   "dependencies": {
-    "express": "^4.11.0"
-    }
+    "express": "^4.11.0",
+    "express.io": "^1.1.13",
+    "swig": "^1.4.2"
+  }
 }
