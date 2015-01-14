@@ -4,12 +4,12 @@ var server = express();
 server.http().io();
 
 //Static files
-server.use(express.static('./public'));
+server.use(express.static(__dirname + '/public'));
 
 //Config views
 server.engine('html',swig.renderFile);
 server.set('view engine','html');
-server.set('views','./app/views');
+server.set('views',__dirname + '/app/views');
 
 var messages = [];
 var responses = [];
@@ -29,4 +29,4 @@ server.get('/hashtag/:message',function(req, res){
     res.send('el mensaje <b>'+ req.params.message + '</b> ha sido enviado');
 });
 
-server.listen(8080);
+server.listen(5000);
