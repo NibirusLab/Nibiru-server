@@ -1,5 +1,6 @@
 var express = require('express.io'),
-    swig = require('swig');
+    swig = require('swig'),
+    _ = require('underscore');
 var server = express();
 server.http().io();
 
