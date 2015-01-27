@@ -1,8 +1,8 @@
 # Nibiru-server
 Server of Nibiru app
 
-![alt tag](https://raw.githubusercontent.com/NibirusLab/Nibiru-server/master/principal.png)
-![alt tag](https://raw.githubusercontent.com/NibirusLab/Nibiru-server/master/mapa.png)
+<img src="https://raw.githubusercontent.com/NibirusLab/Nibiru-server/master/principal.png" height="650px"/>
+<img src="https://raw.githubusercontent.com/NibirusLab/Nibiru-server/master/mapa.png" height="650px"/>
 
 ###Run
 ```shell
